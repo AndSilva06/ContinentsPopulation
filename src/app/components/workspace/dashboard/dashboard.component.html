@@ -1,0 +1,9 @@
+<div class="main-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-form-field class="">
+    <input matInput [(ngModel)]="inputValue" placeholder="Population" type="number" (ngModelChange)="populationInputUpdate.next($event)">
+  </mat-form-field>
+  <div *ngIf="continentsLoaded | async">
+    <app-bar-chart [graphName]='id' [data]='continentsPopulation'></app-bar-chart>
+  </div>
+</div>

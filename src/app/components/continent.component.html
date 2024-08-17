@@ -1,0 +1,7 @@
+<div class="main-container">
+  <h1 class="mat-h1">{{id}}</h1>
+  <mat-form-field class="">
+    <input matInput [(ngModel)]="inputValue" placeholder="Population" type="number" (ngModelChange)="populationInputUpdate.next($event)">
+  </mat-form-field>
+  <app-bar-chart [graphName]='id' [data]='dataValues'></app-bar-chart>
+</div>
